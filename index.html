@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="date">
+      <div class="container">
+        <div class="dateInner">
+          <p class="dayOfWeek">Wendsey</p>
+          <p class="currentDate">3 December</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="search">
+      <div class="container">
+        <div class="searchInner">
+          <form id="seachForm">
+            <input type="search" id="searchInput" name="search" placeholder="Search" />
+            <img src="/assets/icons/search-icon.svg" alt="" class="searchIcon" />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <seaction class="filter">
+      <div class="container">
+        <div class="filerInner">
+          <button class="allFilterBtn isActiveFilterBtn" class="">All</button>
+          <button class="activeFilterBtn">Active</button>
+          <button class="completedFilterBtn">Completed</button>
+        </div>
+      </div>
+    </seaction>
+
+    <section class="toDoList">
+      <div class="container">
+        <div class="toDolistInner">
+
+          <!-- <div class="toDolistItem isActive">
+            <div class="toDolistItemLeft">
+              <label class="checkbox">
+                <input type="checkbox"/>
+                <span class="custom-checkbox"></span>
+              </label>
+            </div>
+            <div class="toDolistItemRight">
+              <p class="toDolistItemRightDate">10 Jan, 11:30</p>
+              <p class="toDolistItemRightTask">Feed the cat</p>
+            </div>
+          </div>
+
+          <div class="toDolistItem">
+            <div class="toDolistItemLeft">
+              <label class="checkbox">
+                <input type="checkbox" />
+                <span class="custom-checkbox"></span>
+              </label>
+            </div>
+            <div class="toDolistItemRight isTaskCompleted">
+              <p class="toDolistItemRightDate ">10 Jan, 11:30</p>
+              <p class="toDolistItemRightTask">Feed the cat</p>
+            </div>
+          </div> -->
+          
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <button class="createNewTaskBtn">
+        <img src="/assets/icons/pencil.svg" alt="" />
+      </button>
+    </div>
+
+    <div class="modalOverlay hidden" id="modalOverlay"></div>
+
+    <section class="modal hidden">
+      <div class="container">
+        <div class="modalHandle"></div>
+
+        <div class="modalContent">
+          <form id="taskForm">
+            <div class="taskFormInputs">
+              <input id="descriptionInput" type="text" placeholder="Description" />
+              <input id="dateInput" type="text" placeholder="Date" />
+            </div>
+            <div class="remindContent">
+              <span>Remind me</span>
+              <label class="switch">
+                <input id="toogleInput" type="checkbox" />
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <div class="taskFormButtons">
+              <input id="addBtn" type="submit" value="Add task" />
+              <button id="cancelBtn">Cancel</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="/scripts/script.js"></script>
+</html>
