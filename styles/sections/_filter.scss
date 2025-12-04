@@ -1,0 +1,63 @@
+@use '../variables/colors';
+
+.filerInner {
+  max-width: 1200px;
+  display: flex;
+}
+
+.allFilterBtn {
+  border-top-left-radius: 6.2rem;
+  border-bottom-left-radius: 6.2rem;
+}
+
+.activeFilterBtn {
+  margin-left: -1px;
+}
+
+.completedFilterBtn {
+  margin-left: -1px;
+  border-top-right-radius: 6.2rem;
+  border-bottom-right-radius: 6.2rem;
+}
+
+.isActiveFilterBtn {
+  background-color: colors.$bgColor;
+  position: relative;
+}
+
+.allFilterBtn,
+.activeFilterBtn,
+.completedFilterBtn {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+  background-color: transparent;
+  border: 1px solid colors.$borderColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.allFilterBtn:hover,
+.activeFilterBtn:hover,
+.completedFilterBtn:hover {
+  background-color: colors.$primariColorLight;
+}
+
+.isActiveFilterBtn {
+  background-color: colors.$primariColorLight;
+}
+
+.isActiveFilterBtn::before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  background-image: url('/assets/icons/check-icon.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,17 @@
+@use '../variables/mixins';
+
+.date {
+  margin-bottom: 1rem;
+}
+
+.dateInner {
+  @include mixins.flexBox(flex, column, space-between, start, 0.2rem);
+}
+
+.dayOfWeek {
+  font-size: 1.2rem;
+}
+
+.currentDate {
+  font-size: 0.9rem;
+}
